@@ -1,5 +1,8 @@
 # 2580.py
 
+import sys
+
+
 def check(x, y, num):
     ch_row = sudoku[x]
     ch_col = [sudoku[i][y] for i in range(9)]
@@ -20,6 +23,7 @@ def sdk(zeros):
     if not zeros:
         for i in sudoku:
             print(' '.join(map(str, i)))
+        sys.exit()
         return
 
     for t in range(1, 10):
